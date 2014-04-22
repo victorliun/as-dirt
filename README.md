@@ -1,4 +1,3 @@
-newsletter_archive
-==================
-
-Repository for newsletter archive project.
+django_quick_start
+======================
+For quick start django
