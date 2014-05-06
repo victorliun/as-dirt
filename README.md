@@ -1,3 +1,4 @@
-django_quick_start
-======================
-For quick start django
+=======
+as-dirt
+=======
+Maybe it is not a good name.
