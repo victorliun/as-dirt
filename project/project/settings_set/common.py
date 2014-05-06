@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(__file__).rsplit('/',1)[0]
+BASE_DIR = os.path.dirname(__file__).rsplit('/',2)[0]
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,11 +40,12 @@ DEFAULT_APPS = (
 
 THIRD_PART_APPS = (
     'south',
+    'bootstrap3',
 )
 
 
 LOCAL_APPS = (
-#    'apps.archive',
+    'apps.home',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PART_APPS + LOCAL_APPS
@@ -113,6 +114,12 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
+STATICFILES_DIRS = (
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+)
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -127,6 +134,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request",
+)
+TEMPLATE_DIRS = (
+    # The docs say it should be absolute path: PROJECT_PATH is precisely one.
+    # Life is wonderful!
+    os.path.join(BASE_DIR, "templates"),
 )
 
 
@@ -182,4 +194,13 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+
+# Settings for django-bootstrap3
+BOOTSTRAP3 = {
+    'set_required': False,
+    'form_error_class': 'bootstrap3-error',
+    'form_required_class': 'bootstrap3-required',
+    'javascript_in_head': True,
 }

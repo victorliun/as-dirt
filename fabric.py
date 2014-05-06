@@ -52,30 +52,31 @@ from fabric.contrib.project import rsync_project
 from fabric.contrib import files, console
 from fabric import utils
 from fabric.operations import *
+import os
 
 # globals
-env.project_name = 'newsletter_archive'
+env.project_name = 'django_quick_start'
 
 def environment():
     # Local user, same as remote for ease
-    env.user = 'newsletter_archive'
+    env.user = 'django_quick_start'
     #     Remote Info
     env.hosts = ['127.0.0.1']
-    env.deploy_user = 'newsletter_archive' 
+    env.deploy_user = 'victor' 
     #     Make the version any number you want  
     env.version = 1
     env.release = env.version
     #     This is where the virtual env is created
-    env.code_root = '/web/newsletter_archive'
+    env.code_root = os.path.dirname(__file__).rsplit('/',1)[0]
     #     This path is for activating the virtual env
     env.activate = 'source %s/env/bin/activate' %(env.code_root)
     #     This path is used to change permissions
-    env.code_root_parent = "/web" 
+    env.code_root_parent = env.code_root.rsplit('/', 1)[0] 
     #     whole_path looks like /web/webme/releases/1/webme
     #     This is where the code really is
     env.whole_path = "%s/releases/%s/%s"%(env.code_root, env.release, env.project_name)
     #     whole_path_symlinked looks like /web/webme/releases/current/webme
-    env.whole_path_symlinked = "%s/releases/current/%s"%(env.code_root, env.project_name)
+    env.whole_path_symlinked = "%s/releases/%s/%s"%(env.code_root, env.version, env.project_name)
     
     
 def virtualenv(command):
