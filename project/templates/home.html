@@ -1,7 +1,114 @@
 {% extends 'base.html' %}
 
-{% block title %}django-bootstrap3{% endblock %}
-
-{% block content %}
-    This is <em>bootstrap3</em> for <strong>Django</strong>.
+{% block page_title %}{{block.super}} - Home{% endblock %}
+{% load staticfiles %}
+{% block extra_css%}
+<link href="{% static 'css/about.css'%}" rel="stylesheet">
+{%endblock%}
+{% block container %}
+    <article id="cv">
+      <h2>Curriculum vitae</h2>
+      <section id="whoami">
+      <img src="{%static 'img/prof.jpg'%}" width="25%" min-width="100px"/>
+        <h3>Who I Am</h3>
+        <p>
+          A brave man? Possibly this is your first impression about me after you have looked the picture. Yes, it is 134m high. When facing fear, I accepted the challenge. 
+        </p>
+        <p>
+          A programmer. I have learned software engineering in <a href="http://wwwold.dlut.edu.cn/en/" target="_blank">Dalian University of Technology</a> I worked for international companies since 2010 as a web developer, software engineer.
+        </p>
+        <p>
+          A cyclist. I like cycling, specially down hill. It was one of the coolest thing I did riding down from Queenstown's Gondola. 
+        </p>
+        <p>
+          A cook. When I have time, I like to server myself with a great meal. I enjoy cooking and enjoy the food I made.
+        </p>
+        <p>
+          I am a hiker, reader, surfer, listener and more.
+        </p>
+      </section>
+      <section id="whatido">
+        <h3>What I Do</h3>
+        <p>
+          As a programmer. I have 3+ years experience on web application developing, 2+ years on C++ software system developing. I have worked for international companies for nearly 3 years. Now I work as a free lancer.
+        </p>
+        <p>
+          <strong>Web Applications:</strong>
+          <ul>
+            <li>Python on Django apps</li>
+            <li>Python on Flask apps</li>
+            <li>Nodejs on Meteor apps</li>
+          </ul>
+        </p>
+        <p>
+          <strong>Scripts:</strong>
+          <ul>
+            <li>Scrapers by using Python</li>
+          </ul>
+        </p>
+        <p>
+          <strong>Desktop Apps:</strong>
+          <ul>
+            <li>C++ software</li>
+          </ul>
+        </p>
+      </section>
+      <section id="skills">
+        <h3>Main skills</h3>
+        <ul>
+          <li>Python, Django, Scrapy, Flask</li>
+          <li>HTML5, CSS3, Javascript, jQuery, AJAX, XLST</li>
+          <li>C++, SLT, C</li>
+          <li>Nodejs, Meteor</li>
+          <li>Mysql, Mongodb</li>
+          <li>Smattering of Object C/PHP/Java/</li>
+          <li>Linux, Maxos developing skills</li>
+        </ul>
+      </section>
+      <section id="Projects">
+        <h3>Projects</h3>
+        <ul>
+          <li>
+            <h4>Archive Engine</h4>
+            <ul>
+              <li>Client: India</li>
+              <li>About: Django project, Archive news by using <strong>phantomjs</strong>, <strong>Cloundiray</strong>.</li>
+              <li>Skills: Python, Django, MySQL, Mongodb, Couldinary, phantomjs, JS, CSS, HTML, jQuery, Nginx...</li>
+              <li>Role: Free lancer</li>
+              <li>Time: more than two weeks</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Pachinko</h4>
+            <ul>
+              <li>Client: US</li>
+              <li>About: Flask project, Scrap data from pachinko website. Reorganise them and display nice for the client.</li>
+              <li>Role: Free lancer</li>
+              <li>Skills: Python, Flask, ghost, Mongodb, JS, CSS, HTML, jQuery, Nginx...</li>
+              <li>Time: more than two weeks</li>
+            </ul>
+          </li>
+          <li>
+            <h4>PhotoBoard</h4>
+            <ul>
+              <li>Client: US</li>
+              <li>About: Meteor project, Photo sharing web app for the special field</li>
+              <li>Skills: Nodejs, Meteor, Couldinary, HTML, JS, CSS</li>
+              <li>Role: Free lancer</li>
+              <li>Time: more than two weeks</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Oxygen Project</h4>
+            <ul>
+              <li>Company: UK</li>
+              <li>About: Django project, for company official website.</li>
+              <li>Skills: Python, C++, Django, MySQL, HTML, JS, CSS, jQuery, Apache</li>
+              <li>Role: IT Developer</li>
+              <li>Time: nearly two years</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </article>
 {% endblock %}

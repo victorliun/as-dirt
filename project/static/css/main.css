@@ -8,6 +8,10 @@ body {
   margin-bottom: 60px;
 }
 
+#headerbar {
+  min-width: 90%;
+}
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -23,6 +27,10 @@ body > .container {
 
 .container {
     width: 80%;
+}
+
+section {
+  margin: 20px 0;
 }
 
 .container .text-muted {
