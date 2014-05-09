@@ -9,7 +9,7 @@
     <article id="cv">
       <h2>Curriculum vitae</h2>
       <section id="whoami">
-      <img src="{%static 'img/prof.jpg'%}" width="25%" min-width="100px"/>
+      <img class="img-circle" src="{%static 'img/prof.jpg'%}" width="25%" min-width="100px"/>
         <h3>Who I Am</h3>
         <p>
           A brave man? Possibly this is your first impression about me after you have looked the picture. Yes, it is 134m high. When facing fear, I accepted the challenge. 
@@ -30,7 +30,7 @@
       <section id="whatido">
         <h3>What I Do</h3>
         <p>
-          As a programmer. I have 3+ years experience on web application developing, 2+ years on C++ software system developing. I have worked for international companies for nearly 3 years. Now I work as a free lancer.
+          As a programmer. I have 3+ years experience on web application developing, 2+ years on C++ software system developing. I have worked for international companies for nearly 3 years. Now I work as a free lancer. I can do:
         </p>
         <p>
           <strong>Web Applications:</strong>
@@ -44,6 +44,7 @@
           <strong>Scripts:</strong>
           <ul>
             <li>Scrapers by using Python</li>
+            <li>Other scripts</li>
           </ul>
         </p>
         <p>
@@ -56,18 +57,19 @@
       <section id="skills">
         <h3>Main skills</h3>
         <ul>
-          <li>Python, Django, Scrapy, Flask</li>
+          <li><span class="label label-danger">Python</span>, Django, Scrapy, Flask</li>
           <li>HTML5, CSS3, Javascript, jQuery, AJAX, XLST</li>
-          <li>C++, SLT, C</li>
+          <li><span class='label label-warning'>Bootstrap</span></li>
+          <li><span class="label label-info">C++</span>, SLT, C</li>
           <li>Nodejs, Meteor</li>
           <li>Mysql, Mongodb</li>
           <li>Smattering of Object C/PHP/Java/</li>
-          <li>Linux, Maxos developing skills</li>
+          <li>Linux, MacOS developing skills</li>
         </ul>
       </section>
       <section id="Projects">
         <h3>Projects</h3>
-        <ul>
+        <ol>
           <li>
             <h4>Archive Engine</h4>
             <ul>
@@ -108,7 +110,7 @@
               <li>Time: nearly two years</li>
             </ul>
           </li>
-        </ul>
+        </ol>
       </section>
     </article>
 {% endblock %}
